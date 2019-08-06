@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Calculator_Project_2__WPF_"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="750">
-    <DockPanel Background="LightGray">
-        <Menu DockPanel.Dock="Top" Background="#FFE0E0E0">
+        Title="Calculator" Height="350" Width="550">
+    <DockPanel Background="WhiteSmoke">
+        <Menu DockPanel.Dock="Top" Background="WhiteSmoke">
             <MenuItem Header="_File">
                 <MenuItem Header="_Exit"/>
             </MenuItem>
@@ -15,7 +15,22 @@
                 <MenuItem Header="_View Help"/>
             </MenuItem>
         </Menu>
-        <Grid>
+        <Grid Margin="5">
+
+            <Grid.Resources>
+                <Style TargetType="Button">
+                    <Setter Property="Margin" Value="4"></Setter>
+                    <Setter Property="Background" Value="#e1e1e1"></Setter>
+                    <Setter Property="BorderBrush" Value="#adadad"></Setter>
+                </Style>
+                
+                <Style TargetType="TextBox">
+                    <Setter Property="Margin" Value="4"/>
+                    <Setter Property="FontSize" Value="24"/>
+                    <Setter Property="Padding" Value="0"/>
+                </Style>
+            </Grid.Resources>
+            
 
             <Grid.RowDefinitions>
                 <RowDefinition Height="5*"/>
@@ -25,7 +40,7 @@
             <Grid Grid.Row="0">
 
                 <Grid.RowDefinitions>
-                    <RowDefinition  />
+                    <RowDefinition />
                     <RowDefinition />
                     <RowDefinition />
                     <RowDefinition />
@@ -78,11 +93,7 @@
                 <Button Grid.Row="4" Grid.Column="5" Content="=" />
                 <Button Grid.Row="4" Grid.Column="6" Content="+" />
 
-
-
             </Grid>
-            
-            
             
             
             <Grid Grid.Row="1">
@@ -93,7 +104,6 @@
 
                 <TextBox Grid.Column="0"></TextBox>
                 <Button Grid.Column="1" Content="Go!!"/>
-
             </Grid>
             
             
