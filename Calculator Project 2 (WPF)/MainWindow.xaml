@@ -5,8 +5,98 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Calculator_Project_2__WPF_"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="MainWindow" Height="450" Width="750">
+    <DockPanel Background="LightGray">
+        <Menu DockPanel.Dock="Top" Background="#FFE0E0E0">
+            <MenuItem Header="_File">
+                <MenuItem Header="_Exit"/>
+            </MenuItem>
+            <MenuItem Header="_Help">
+                <MenuItem Header="_View Help"/>
+            </MenuItem>
+        </Menu>
+        <Grid>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition  />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Button Grid.Row="0" Grid.Column="0" Content="Radian" />
+                <Button Grid.Row="0" Grid.Column="1" Content="Degree" />
+                <Button Grid.Row="0" Grid.Column="2" Content="Factorial" />
+                <Button Grid.Row="0" Grid.Column="3" Content="(" />
+                <Button Grid.Row="0" Grid.Column="4" Content=")" />
+                <Button Grid.Row="0" Grid.Column="5" Content="%" />
+                <Button Grid.Row="0" Grid.Column="6" Content="Clear" />
+                <Button Grid.Row="1" Grid.Column="0" Content="Arcsin" />
+                <Button Grid.Row="1" Grid.Column="1" Content="Sin" />
+                <Button Grid.Row="1" Grid.Column="2" Content="Sqrt" />
+                <Button Grid.Row="1" Grid.Column="3" Content="7" />
+                <Button Grid.Row="1" Grid.Column="4" Content="8" />
+                <Button Grid.Row="1" Grid.Column="5" Content="9" />
+                <Button Grid.Row="1" Grid.Column="6" Content="/" />
+                <Button Grid.Row="2" Grid.Column="0" Content="Arccos" />
+                <Button Grid.Row="2" Grid.Column="1" Content="Cos" />
+                <Button Grid.Row="2" Grid.Column="2" Content="Ln" />
+                <Button Grid.Row="2" Grid.Column="3" Content="4" />
+                <Button Grid.Row="2" Grid.Column="4" Content="5" />
+                <Button Grid.Row="2" Grid.Column="5" Content="6" />
+                <Button Grid.Row="2" Grid.Column="6" Content="*" />
+                <Button Grid.Row="3" Grid.Column="0" Content="Arctan" />
+                <Button Grid.Row="3" Grid.Column="1" Content="Tan" />
+                <Button Grid.Row="3" Grid.Column="2" Content="Log" />
+                <Button Grid.Row="3" Grid.Column="3" Content="1" />
+                <Button Grid.Row="3" Grid.Column="4" Content="2" />
+                <Button Grid.Row="3" Grid.Column="5" Content="3" />
+                <Button Grid.Row="3" Grid.Column="6" Content="-" />
+                <Button Grid.Row="4" Grid.Column="0" Content="π" />
+                <Button Grid.Row="4" Grid.Column="1" Content="e" />
+                <Button Grid.Row="4" Grid.Column="2" Content="^" />
+                <Button Grid.Row="4" Grid.Column="3" Content="0" />
+                <Button Grid.Row="4" Grid.Column="4" Content="," />
+                <Button Grid.Row="4" Grid.Column="5" Content="=" />
+                <Button Grid.Row="4" Grid.Column="6" Content="+" />
+
+
+
+            </Grid>
+            
+            
+            
+            
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="6*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBox Grid.Column="0"></TextBox>
+                <Button Grid.Column="1" Content="Go!!"/>
+
+            </Grid>
+            
+            
+        </Grid>
+    </DockPanel>
 </Window>
