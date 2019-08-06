@@ -5,14 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Calculator_Project_2__WPF_"
         mc:Ignorable="d"
+        Loaded="Window_Load"
         Title="Calculator" Height="350" Width="550">
     <DockPanel Background="WhiteSmoke">
         <Menu DockPanel.Dock="Top" Background="WhiteSmoke">
             <MenuItem Header="_File">
-                <MenuItem Header="_Exit"/>
+                <MenuItem Header="_Exit"        Name="exitButton"       Click="exitButton_Click"/>
             </MenuItem>
             <MenuItem Header="_Help">
-                <MenuItem Header="_View Help"/>
+                <MenuItem Header="_View Help"   Name="viewHelpButton"   Click="viewHelpButton_Click"/>
             </MenuItem>
         </Menu>
         <Grid Margin="5">
@@ -57,41 +58,41 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
 
-                <Button Grid.Row="0" Grid.Column="0" Content="Radian" />
-                <Button Grid.Row="0" Grid.Column="1" Content="Degree" />
-                <Button Grid.Row="0" Grid.Column="2" Content="Factorial" />
-                <Button Grid.Row="0" Grid.Column="3" Content="(" />
-                <Button Grid.Row="0" Grid.Column="4" Content=")" />
-                <Button Grid.Row="0" Grid.Column="5" Content="%" />
-                <Button Grid.Row="0" Grid.Column="6" Content="Clear" />
-                <Button Grid.Row="1" Grid.Column="0" Content="Arcsin" />
-                <Button Grid.Row="1" Grid.Column="1" Content="Sin" />
-                <Button Grid.Row="1" Grid.Column="2" Content="Sqrt" />
-                <Button Grid.Row="1" Grid.Column="3" Content="7" />
-                <Button Grid.Row="1" Grid.Column="4" Content="8" />
-                <Button Grid.Row="1" Grid.Column="5" Content="9" />
-                <Button Grid.Row="1" Grid.Column="6" Content="/" />
-                <Button Grid.Row="2" Grid.Column="0" Content="Arccos" />
-                <Button Grid.Row="2" Grid.Column="1" Content="Cos" />
-                <Button Grid.Row="2" Grid.Column="2" Content="Ln" />
-                <Button Grid.Row="2" Grid.Column="3" Content="4" />
-                <Button Grid.Row="2" Grid.Column="4" Content="5" />
-                <Button Grid.Row="2" Grid.Column="5" Content="6" />
-                <Button Grid.Row="2" Grid.Column="6" Content="*" />
-                <Button Grid.Row="3" Grid.Column="0" Content="Arctan" />
-                <Button Grid.Row="3" Grid.Column="1" Content="Tan" />
-                <Button Grid.Row="3" Grid.Column="2" Content="Log" />
-                <Button Grid.Row="3" Grid.Column="3" Content="1" />
-                <Button Grid.Row="3" Grid.Column="4" Content="2" />
-                <Button Grid.Row="3" Grid.Column="5" Content="3" />
-                <Button Grid.Row="3" Grid.Column="6" Content="-" />
-                <Button Grid.Row="4" Grid.Column="0" Content="π" />
-                <Button Grid.Row="4" Grid.Column="1" Content="e" />
-                <Button Grid.Row="4" Grid.Column="2" Content="^" />
-                <Button Grid.Row="4" Grid.Column="3" Content="0" />
-                <Button Grid.Row="4" Grid.Column="4" Content="," />
-                <Button Grid.Row="4" Grid.Column="5" Content="=" />
-                <Button Grid.Row="4" Grid.Column="6" Content="+" />
+                <Button Grid.Row="0" Grid.Column="0" Content="Radian"       Name="radianButton"             Click="radianButton_Click"/>
+                <Button Grid.Row="0" Grid.Column="1" Content="Degree"       Name="degreeButton"             Click="degreeButton_Click"/>
+                <Button Grid.Row="0" Grid.Column="2" Content="Factorial"    Name="factorialButton"          Click="factorialButton_Click"/>
+                <Button Grid.Row="0" Grid.Column="3" Content="("            Name="openBracketButton"        Click="openBracketButton_Click"/>
+                <Button Grid.Row="0" Grid.Column="4" Content=")"            Name="closeBracketButton"       Click="closeBracketButton_Click"/>
+                <Button Grid.Row="0" Grid.Column="5" Content="%"            Name="moduloButton"             Click="moduloButton_Click"/>
+                <Button Grid.Row="0" Grid.Column="6" Content="Clear"        Name="clearButton"              Click="clearButton_Click"/>
+                <Button Grid.Row="1" Grid.Column="0" Content="Arcsin"       Name="arcsinButton"             Click="arcsinButton_Click"/>
+                <Button Grid.Row="1" Grid.Column="1" Content="Sin"          Name="sinButton"                Click="sinButton_Click"/>
+                <Button Grid.Row="1" Grid.Column="2" Content="Sqrt"         Name="sqrtButton"               Click="sqrtButton_Click"/>
+                <Button Grid.Row="1" Grid.Column="3" Content="7"            Name="sevenButton"              Click="sevenButton_Click"/>
+                <Button Grid.Row="1" Grid.Column="4" Content="8"            Name="eightButton"              Click="eightButton_Click"/>
+                <Button Grid.Row="1" Grid.Column="5" Content="9"            Name="nineButton"               Click="nineButton_Click"/>
+                <Button Grid.Row="1" Grid.Column="6" Content="/"            Name="divisionButton"           Click="divisionButton_Click"/>
+                <Button Grid.Row="2" Grid.Column="0" Content="Arccos"       Name="arccosButton"             Click="arccosButton_Click"/>
+                <Button Grid.Row="2" Grid.Column="1" Content="Cos"          Name="cosButton"                Click="cosButton_Click"/>
+                <Button Grid.Row="2" Grid.Column="2" Content="Ln"           Name="lnButton"                 Click="lnButton_Click"/>
+                <Button Grid.Row="2" Grid.Column="3" Content="4"            Name="fourButton"               Click="fourButton_Click"/>
+                <Button Grid.Row="2" Grid.Column="4" Content="5"            Name="fiveButton"               Click="fiveButton_Click"/>
+                <Button Grid.Row="2" Grid.Column="5" Content="6"            Name="sixButton"                Click="sixButton_Click"/>
+                <Button Grid.Row="2" Grid.Column="6" Content="*"            Name="multiplyButton"            Click="multiplyButton_Click"/>
+                <Button Grid.Row="3" Grid.Column="0" Content="Arctan"       Name="arctanButton"             Click="arctanButton_Click"/>
+                <Button Grid.Row="3" Grid.Column="1" Content="Tan"          Name="tanButton"                Click="tanButton_Click"/>
+                <Button Grid.Row="3" Grid.Column="2" Content="Log"          Name="logButton"                Click="logButton_Click"/>
+                <Button Grid.Row="3" Grid.Column="3" Content="1"            Name="oneButton"                Click="oneButton_Click"/>
+                <Button Grid.Row="3" Grid.Column="4" Content="2"            Name="twoButton"                Click="twoButton_Click"/>
+                <Button Grid.Row="3" Grid.Column="5" Content="3"            Name="threeButton"              Click="threeButton_Click"/>
+                <Button Grid.Row="3" Grid.Column="6" Content="-"            Name="subtractButton"           Click="subtractButton_Click"/>
+                <Button Grid.Row="4" Grid.Column="0" Content="π"            Name="piButton"                 Click="piButton_Click"/>
+                <Button Grid.Row="4" Grid.Column="1" Content="e"            Name="expButton"                Click="expButton_Click"/>
+                <Button Grid.Row="4" Grid.Column="2" Content="^"            Name="powerButton"              Click="powerButton_Click"/>
+                <Button Grid.Row="4" Grid.Column="3" Content="0"            Name="zeroButton"               Click="zeroButton_Click"/>
+                <Button Grid.Row="4" Grid.Column="4" Content=","            Name="decimalSeperatorButton"   Click="decimalSeperatorButton_Click"/>
+                <Button Grid.Row="4" Grid.Column="5" Content="="            Name="equalButton"              Click="equalButton_Click"/>
+                <Button Grid.Row="4" Grid.Column="6" Content="+"            Name="plusButton"               Click="plusButton_Click"/>
 
             </Grid>
             
@@ -102,8 +103,8 @@
                     <ColumnDefinition Width="1*"/>
                 </Grid.ColumnDefinitions>
 
-                <TextBox Grid.Column="0"></TextBox>
-                <Button Grid.Column="1" Content="Go!!"/>
+                <TextBox Grid.Column="0"                Name="inputTextBox"     PreviewMouseDown="textBox_Click"></TextBox>
+                <Button Grid.Column="1" Content="Go!!"  Name="goButton"         Click="goButton_Click"/>
             </Grid>
             
             
